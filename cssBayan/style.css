@@ -89,30 +89,13 @@ img {
 .tab-label div:last-child {
   transition: all 0.5s;
 }
-.example:hover .tab-label div:last-child {
-  transform: scale(1);
-}
-.example:hover {
-  color: yellow;
-}
+
 .tab-label div:last-child {
   transform: scale(0);
   font-size: 1.5em;
   line-height: 1;
 }
 
-.tabs:hover .tab-label div:last-child {
-  transform: scale(1);
-  transform: rotate(45deg);
-}
-.example:hover input:checked ~ .tab-label div:last-child {
-  transform: rotate(45deg);
-}
-.tabs:hover .label {
-  transform: scale(1);
-  max-height: 100%;
-  transition: all 0.3s; /*медленная картинка*/
-}
 input:checked ~ .label {
   transform: scale(1);
   max-height: 100%;
@@ -149,5 +132,26 @@ input:checked ~ .tab-label {
   }
   img {
     width: 45vw;
+  }
+}
+@media (hover: hover) {
+  /* when hover is supported */
+  .example:hover .tab-label div:last-child {
+    transform: scale(1);
+  }
+  .example:hover {
+    color: yellow;
+  }
+  .tabs:hover .tab-label div:last-child {
+    transform: scale(1);
+    transform: rotate(45deg);
+  }
+  .example:hover input:checked ~ .tab-label div:last-child {
+    transform: rotate(45deg);
+  }
+  .tabs:hover .label {
+    transform: scale(1);
+    max-height: 100%;
+    transition: all 0.3s; /*медленная картинка*/
   }
 }
