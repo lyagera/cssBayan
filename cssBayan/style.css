@@ -38,17 +38,21 @@ header {
   text-align: center;
 }
 h1 {
-  font-size: 2em;
+  font-size: 3em;
+  line-height: 1.5;
+}
+p {
+  line-height: 2;
 }
 .wrapper {
-  padding: 80px 15px;
+  /* padding: 80px 15px; */
   width: 80%;
   margin: 0 auto;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 .example {
-  padding: 0 15px;
-  border: 1px solid yellowgreen;
+  /* padding: 0 1em; */
+  /* border: 1px solid yellowgreen; */
 }
 input {
   z-index: -1;
@@ -56,16 +60,21 @@ input {
   position: absolute;
 }
 .tabs {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   text-align: center;
   display: flex;
   flex-direction: column;
+  border-bottom: 0.0625em solid grey;
+}
+.tabs:first-child {
+  border-top: 0.0625em solid grey;
 }
 .label {
   transform: scale(0);
   max-height: 0;
+  transition: all 0.5s;
 }
 img {
   width: 25vw;
@@ -81,12 +90,13 @@ img {
   padding: 0 1em;
   display: flex;
   justify-content: space-between;
+  transition: all 0.5s;
 }
-input:checked ~ .tab-label div:last-child {
+.tab-label div:last-child {
+  transition: all 0.5s;
 }
 .example:hover .tab-label div:last-child {
   transform: scale(1);
-  transition: all 1s;
 }
 .example:hover {
   color: yellow;
@@ -107,6 +117,7 @@ input:checked ~ .tab-label div:last-child {
 .tabs:hover .label {
   transform: scale(1);
   max-height: 100%;
+  transition: all 0.3s; /*медленная картинка*/
 }
 input:checked ~ .label {
   transform: scale(1);
@@ -114,4 +125,35 @@ input:checked ~ .label {
 }
 input:checked ~ .tab-label {
   color: yellow;
+}
+@media (max-width: 991.98px) {
+  h1 {
+    font-size: 2em;
+  }
+  .tab-label div:last-child {
+    font-size: 1.25em;
+  }
+  .tab-label div:first-child {
+    font-size: 0.9em;
+  }
+  img {
+    width: 35vw;
+  }
+}
+@media (max-width: 767.98px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 0.9em;
+  }
+  .tab-label div:last-child {
+    font-size: 1em;
+  }
+  .tab-label div:first-child {
+    font-size: 0.8em;
+  }
+  img {
+    width: 45vw;
+  }
 }
