@@ -67,6 +67,15 @@ input {
   transform: scale(0);
   max-height: 0;
 }
+img {
+  width: 25vw;
+}
+.tabs:active img {
+  opacity: 0.5;
+}
+.tabs:active .tab-label {
+  color: blue;
+}
 .tab-label {
   line-height: 2;
   padding: 0 1em;
@@ -77,12 +86,15 @@ input:checked ~ .tab-label div:last-child {
 }
 .example:hover .tab-label div:last-child {
   transform: scale(1);
+  transition: all 1s;
 }
 .example:hover {
   color: yellow;
 }
 .tab-label div:last-child {
   transform: scale(0);
+  font-size: 1.5em;
+  line-height: 1;
 }
 
 .tabs:hover .tab-label div:last-child {
