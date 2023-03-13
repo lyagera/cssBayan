@@ -85,6 +85,7 @@ img {
   display: flex;
   justify-content: space-between;
   transition: all 0.5s;
+  cursor: pointer;
 }
 .tab-label div:last-child {
   transition: all 0.5s;
@@ -141,10 +142,12 @@ input:checked ~ .tab-label {
   }
   .example:hover {
     color: yellow;
+    cursor: pointer;
   }
   .tabs:hover .tab-label div:last-child {
     transform: scale(1);
     transform: rotate(45deg);
+    cursor: pointer;
   }
   .example:hover input:checked ~ .tab-label div:last-child {
     transform: rotate(45deg);
@@ -153,5 +156,6 @@ input:checked ~ .tab-label {
     transform: scale(1);
     max-height: 100%;
     transition: all 0.3s; /*медленная картинка*/
+    cursor: pointer;
   }
 }
