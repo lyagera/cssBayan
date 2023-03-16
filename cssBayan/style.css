@@ -52,7 +52,7 @@ p {
 input {
   z-index: -1;
   opacity: 0;
-  position: absolute;
+  /* position: absolute; */
 }
 .tabs {
   width: 100%;
